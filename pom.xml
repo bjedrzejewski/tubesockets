@@ -47,7 +47,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.e4developer.MainKt</mainClass>
+                                    <mainClass>com.scottlogic.bjedrzejewski.Main</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
