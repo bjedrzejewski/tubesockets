@@ -11,6 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         Javalin.create()
+                .get("/test", ctx -> {
+                    ctx.result("Hello London Tube!");
+                })
                 .port(7070)
                 .ws("/game/:session-id", ws -> {
                     ws.onConnect(session -> {
