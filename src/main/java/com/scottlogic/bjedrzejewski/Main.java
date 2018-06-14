@@ -19,6 +19,13 @@ public class Main {
                     ctx.result("Hello London Tube!");
                 })
                 .port(7070)
+                .get("/players", ctx -> {
+                    String players = "";
+                    for (WsSession ws : sessions){
+                        players += sessions.toString();
+                    }
+                    ctx.result("I think these are the players: "+players);
+                })
                 .ws("/game/:session-id", ws -> {
                     ws.onConnect(session -> {
                         session.send("{\"playerId\":"+newPlayerId+++"}");
